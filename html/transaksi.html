@@ -119,11 +119,11 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Dashboards -->
+            <!-- Dashboard -->
             <li class="menu-item">
               <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Dashboards">Dashboards</div>
+                <div data-i18n="Dashboard">Dashboard</div>
               </a>
             </li>
             <li class="menu-item">
@@ -273,11 +273,50 @@
               <button style="background-color:#FF495F ; border-radius:50%; margin-left:10px;" type="button" class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
                 <path d="M7.00004 22.9567C7.00004 23.5755 7.24587 24.169 7.68346 24.6066C8.12104 25.0442 8.71454 25.29 9.33337 25.29H18.6667C19.2855 25.29 19.879 25.0442 20.3166 24.6066C20.7542 24.169 21 23.5755 21 22.9567V8.95671H7.00004V22.9567ZM9.33337 11.29H18.6667V22.9567H9.33337V11.29ZM18.0834 5.45671L16.9167 4.29004H11.0834L9.91671 5.45671H5.83337V7.79004H22.1667V5.45671H18.0834Z" fill="#404040"/>
               </svg></button>
-              <button style="background-color:#9CFF2E ; border-radius:50%; margin-left:10px;" type="button" class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+              <button type="button" data-bs-toggle="modal" data-bs-target="#basicModal" style="background-color:#9CFF2E ; border-radius:50%; margin-left:10px;" type="button" class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
                 <path d="M21.682 15.6362H15.8487V21.4695C15.8487 21.7789 15.7258 22.0757 15.507 22.2945C15.2882 22.5133 14.9915 22.6362 14.682 22.6362C14.3726 22.6362 14.0759 22.5133 13.8571 22.2945C13.6383 22.0757 13.5154 21.7789 13.5154 21.4695V15.6362H7.68205C7.37263 15.6362 7.07588 15.5133 6.85709 15.2945C6.6383 15.0757 6.51538 14.7789 6.51538 14.4695C6.51538 14.1601 6.6383 13.8634 6.85709 13.6446C7.07588 13.4258 7.37263 13.3029 7.68205 13.3029H13.5154V7.46952C13.5154 7.1601 13.6383 6.86336 13.8571 6.64456C14.0759 6.42577 14.3726 6.30286 14.682 6.30286C14.9915 6.30286 15.2882 6.42577 15.507 6.64456C15.7258 6.86336 15.8487 7.1601 15.8487 7.46952V13.3029H21.682C21.9915 13.3029 22.2882 13.4258 22.507 13.6446C22.7258 13.8634 22.8487 14.1601 22.8487 14.4695C22.8487 14.7789 22.7258 15.0757 22.507 15.2945C22.2882 15.5133 21.9915 15.6362 21.682 15.6362Z" fill="#404040"/>
               </svg></button>
               </div>
-              
+
+              <!-- Modal Input Transaksi -->
+              <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel1">Form Transaksi</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col">
+                        <div class="form-group mb-3">
+                          <label for="kategori" class="form-label">Kategori</label>
+                          <input type="text" id="kategori" class="form-control" placeholder="Masukan Kategori">
+                        </div>
+                        <div class="form-group mb-3">
+                          <label for="tanggal" class="form-label">Tanggal</label>
+                          <input type="date" id="tanggal" class="form-control" >
+                        </div>
+                        <div class="form-group mb-3">
+                          <label for="jumlah" class="form-label">Jumlah</label>
+                          <input type="number" id="jumlah" class="form-control" placeholder="Masukan Jumlah">
+                        </div>
+                        <div class="form-group mb-3">
+                          <label for="keterangan" class="form-label">Keterangan</label>
+                          <select class="form-select" id="keterangan" aria-label="Default select example">
+                            <option selected>Pilih</option>
+                            <option value="1">Pemasukan</option>
+                            <option value="2">Pengeluaran</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn" style="background-color: #FF495F;" data-bs-dismiss="modal">Batalkan</button>
+                      <button type="button" class="btn" style="background-color: #9CFF2E;">Simpan</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Basic Bootstrap Table -->
               <div class="card">
                 <div class="table-responsive text-nowrap">
@@ -356,25 +395,7 @@
                     document.write(new Date().getFullYear());
                   </script>
                   , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-medium">ThemeSelection</a>
-                </div>
-                <div class="d-none d-lg-inline-block">
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link"
-                    >Support</a
-                  >
+                  <a>Monetra Team</a>
                 </div>
               </div>
             </footer>
