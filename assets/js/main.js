@@ -2,6 +2,14 @@
  * Main
  */
 
+ (function($) {
+
+	"use strict";
+
+
+})(jQuery);
+
+
 'use strict';
 
 let menu, animate;
